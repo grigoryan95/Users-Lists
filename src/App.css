@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mainWrapper {
+    display: flex;
+    height: 100vh;
+}
+.leftBlock{
+    width: 25vw;
+    background: teal;
+}
+.rightBlock {
+    width: 75vw;
+}

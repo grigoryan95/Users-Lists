@@ -1,0 +1,25 @@
+.usersBlock {
+    padding: 10px;
+}
+.fas {
+    color: gold;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.aa {
+    box-shadow: rgba(17, 17, 26, 0.1) 0 8px 24px, rgba(17, 17, 26, 0.1) 0 16px 56px, rgba(17, 17, 26, 0.1) 0 24px 80px;
+}
+
+.parent {
+    display: flex;
+    justify-content: space-between;
+    width: 25vw;
+}
+.namesP {
+    color: #1976d2;
+}
+@media only screen and (max-width: 1170px) {
+    .parent {
+        flex-wrap: wrap;
+    }
+}
