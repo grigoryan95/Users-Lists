@@ -4,13 +4,22 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import {useSelector} from "react-redux";
+import Album from "../album/Album";
 
 const UsersBiography = () => {
     const userPreview = useSelector(state => state.users.previewUser);
+    const albums = useSelector(state => state.users.albums);
+
+    const filterAlbumsObj =  albums.map(item => {
+        if (item.userId === userPreview.id ) {
+            return item
+        }
+    } ).filter(x => x !== undefined)
+
 
     return (
-        <div style={{display: 'flex'}}>
-            <div>
+        <div className='container'>
+            <div className='imgIconDiv'>
                 <CardMedia
                     style={{background: 'teal', marginLeft: 10}}
                     component="img"
@@ -19,6 +28,8 @@ const UsersBiography = () => {
                     alt="usersIcon"
                 />
             </div>
+        <div style={{display: 'flex', flexDirection: 'column', }}>
+
             <div>
                         <CardContent style={{marginLeft: 50}}>
                             <Typography gutterBottom variant="h3" color="primary" component="div">
@@ -47,7 +58,9 @@ const UsersBiography = () => {
                             </Typography>
                         </CardContent>
             </div>
+            <Album album={filterAlbumsObj} />
         </div>
+            </div>
     );
 };
 

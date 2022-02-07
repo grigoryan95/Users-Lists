@@ -1,9 +1,10 @@
 import React from "react";
-import {FETCH_USERS_NAMES, SET_PREVIEW_USER} from "../actionTypes/actionsTypes";
+import {FETCH_ALBUMS, FETCH_USERS_NAMES, SET_PREVIEW_USER} from "../actionTypes/actionsTypes";
 
 const initialState = {
     users: [],
-    previewUser: null
+    previewUser: null,
+    albums: []
 };
 
 export const users = (state = initialState, action) => {
@@ -12,6 +13,12 @@ export const users = (state = initialState, action) => {
             return {
                 ...state,
                 users: action.data
+            }
+        }
+        case FETCH_ALBUMS: {
+            return {
+                ...state,
+                albums: action.payload
             }
         }
         case SET_PREVIEW_USER: {

@@ -5,7 +5,7 @@
 }
 .mainWrapper {
     display: flex;
-    height: 100vh;
+    height: 100%;
 }
 .leftBlock{
     width: 25vw;
