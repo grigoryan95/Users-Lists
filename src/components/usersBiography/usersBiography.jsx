@@ -14,24 +14,24 @@ const UsersBiography = () => {
         if (item.userId === userPreview.id ) {
             return item
         }
-    } ).filter(x => x !== undefined)
+    } ).filter(x => x !== undefined);
 
 
     return (
         <div className='container'>
             <div className='imgIconDiv'>
                 <CardMedia
-                    style={{background: 'teal', marginLeft: 10}}
+                    className='cardMediaImg'
                     component="img"
                     height="280"
                     image="http://simpleicon.com/wp-content/uploads/user1.svg"
                     alt="usersIcon"
                 />
             </div>
-        <div style={{display: 'flex', flexDirection: 'column', }}>
+        <div className='divContainer'>
 
             <div>
-                        <CardContent style={{marginLeft: 50}}>
+                        <CardContent className='cardContentBlock'>
                             <Typography gutterBottom variant="h3" color="primary" component="div">
                                 {userPreview.name}
                             </Typography>

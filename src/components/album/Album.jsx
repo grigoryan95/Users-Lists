@@ -9,7 +9,7 @@ const Album = ({album}) => {
             {
                 album.map(item => {
                     return (
-                        <CardContent style={{marginLeft: 50}}>
+                        <CardContent key={item.id} className='albumBigBlock'>
                             <Typography gutterBottom variant="h5" color="primary" component="div">
                                 <h4 className='usersBioInfo'>Albums Items:</h4> <span className='spanItem'>{item.title}</span>
                             </Typography>

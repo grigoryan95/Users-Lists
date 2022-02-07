@@ -10,3 +10,14 @@
 .container {
     display: flex;
 }
+.cardMediaImg {
+    background: teal;
+    margin-left: 10px;
+}
+.divContainer {
+    display: flex;
+    flex-direction: column;
+}
+.cardContentBlock {
+    margin-left: 50px;
+}

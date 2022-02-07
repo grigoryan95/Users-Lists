@@ -17,8 +17,8 @@ const User = ({user}) => {
             <div className='aa'>
                 <Card className='parentDiv'>
                     <CardActions className='parent'>
-                        <Typography variant="body2">
-                            <p className='namesP'>{user.name}</p>
+                        <Typography variant="body2" >
+                            <span className='namesP'>{user.name}</span>
                         </Typography>
                         <Button
                             className='buttonName'
